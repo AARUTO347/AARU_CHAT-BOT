@@ -6,6 +6,7 @@
 
 ### AI Chatbot Template — Built with Next.js and the AI SDK
 
+[![Version](https://img.shields.io/badge/version-3.1.0-blue?style=for-the-badge)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)]()
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)]()
@@ -13,7 +14,7 @@
 
 **Made by [AARUTO](https://github.com/AARUTO347)**
 
-[Features](#-features) • [Quick Start](#-quick-start) • [Deploy](#-deploy) • [Configuration](#-configuration)
+[Features](#-features) • [Quick Start](#-quick-start) • [Deploy](#-deploy) • [Screenshots](#-screenshots)
 
 </div>
 
@@ -22,6 +23,14 @@
 ## About
 
 AARU Chatbot is a free, open-source chatbot template built with **Next.js** and the **Vercel AI SDK**. Ship a production-ready AI chatbot in minutes — not months.
+
+## Screenshots
+
+<div align="center">
+
+![AARU Chatbot Preview](public/preview.png)
+
+</div>
 
 ## Features
 
@@ -190,11 +199,15 @@ AARU_CHAT-BOT/
 │   └── chat/           # Chat-specific components
 ├── lib/
 │   ├── ai/             # AI SDK configuration
-│   │   └── models.ts   # Model provider setup
+│   │   ├── models.ts   # Model provider setup
+│   │   ├── prompts.ts  # System prompts
+│   │   └── tools/      # AI tools
 │   ├── db/             # Database utilities
+│   │   ├── schema.ts   # Database schema
+│   │   └── queries.ts  # Database queries
 │   └── auth/           # Authentication
 ├── public/             # Static assets
-└── docs/               # Documentation
+└── hooks/              # Custom React hooks
 ```
 
 ## Documentation
