@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARU Chatbot - AI Chatbot Template</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e0e0e0; line-height: 1.6; }
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); padding: 80px 20px; text-align: center; }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .logo { width: 120px; height: 120px; margin-bottom: 20px; }
+        .hero h1 { font-size: 3em; background: linear-gradient(90deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+        .hero .tagline { font-size: 1.2em; color: #94a3b8; margin-bottom: 30px; }
+        .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+        .badge { background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); padding: 6px 14px; border-radius: 20px; font-size: 0.85em; color: #60a5fa; }
+        .btn { display: inline-block; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 5px; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: linear-gradient(135deg, #3b82f6, #06b6d4); color: white; }
+        .btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .section { margin-bottom: 60px; }
+        .section h2 { font-size: 2em; margin-bottom: 20px; color: #3b82f6; }
+        .section p { color: #94a3b8; margin-bottom: 15px; }
+        .preview { text-align: center; margin: 30px 0; }
+        .preview img { max-width: 100%; border-radius: 12px; border: 1px solid rgba(59,130,246,0.3); box-shadow: 0 20px 60px rgba(59,130,246,0.15); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .feature-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; transition: transform 0.2s; }
+        .feature-card:hover { transform: translateY(-4px); border-color: rgba(59,130,246,0.3); }
+        .feature-card h3 { color: #60a5fa; margin-bottom: 10px; }
+        .models-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+        .model-tag { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); border-radius: 8px; padding: 12px; text-align: center; font-size: 0.9em; color: #60a5fa; }
+        .code-block { background: rgba(0,0,0,0.4); border: 1px solid rgba(59,130,246,0.2); border-radius: 8px; padding: 20px; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.9em; margin: 15px 0; color: #e0e0e0; }
+        .tech-table { width: 100%; border-collapse: collapse; }
+        .tech-table th, .tech-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .tech-table th { background: rgba(59,130,246,0.1); color: #60a5fa; }
+        footer { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #808090; }
+        footer a { color: #60a5fa; text-decoration: none; }
+        @media (max-width: 600px) { .hero h1 { font-size: 2em; } }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="AARU Chatbot" class="logo">
+            <h1>AARU Chatbot</h1>
+            <p class="tagline">AI Chatbot Template — Built with Next.js and the AI SDK</p>
+            <div class="badges">
+                <span class="badge">v3.1.0</span>
+                <span class="badge">Next.js 15</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">MIT License</span>
+            </div>
+            <a href="https://vercel.com/templates/next.js/chatbot" class="btn btn-primary">Deploy to Vercel</a>
+            <a href="https://github.com/AARUTO347/AARU_CHAT-BOT" class="btn btn-secondary">View on GitHub</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>About</h2>
+            <p>AARU Chatbot is a free, open-source chatbot template built with <strong>Next.js</strong> and the <strong>Vercel AI SDK</strong>. Ship a production-ready AI chatbot in minutes — not months.</p>
+            <p><strong>Made by <a href="https://github.com/AARUTO347" style="color:#60a5fa">AARUTO</a></strong></p>
+        </div>
+
+        <div class="section">
+            <h2>Preview</h2>
+            <div class="preview">
+                <img src="https://raw.githubusercontent.com/AARUTO347/AARU_CHAT-BOT/main/public/preview.png" alt="AARU Chatbot Preview">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Next.js 15 App Router</h3>
+                    <p>Advanced routing, React Server Components, and Server Actions for optimal performance.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Vercel AI SDK</h3>
+                    <p>Unified API for text generation, structured objects, and tool calls with LLMs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>shadcn/ui + Tailwind</h3>
+                    <p>Beautiful, accessible component primitives with utility-first styling.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Generative UI</h3>
+                    <p>Dynamic interfaces generated from AI responses in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Chat History</h3>
+                    <p>Persistent conversations stored in Neon Serverless Postgres.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Auth & File Upload</h3>
+                    <p>Auth.js authentication with Vercel Blob for file storage.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Supported Models</h2>
+            <div class="models-grid">
+                <div class="model-tag">OpenAI GPT-4</div>
+                <div class="model-tag">Anthropic Claude</div>
+                <div class="model-tag">Google Gemini</div>
+                <div class="model-tag">xAI Grok</div>
+                <div class="model-tag">Mistral</div>
+                <div class="model-tag">Moonshot</div>
+                <div class="model-tag">DeepSeek</div>
+                <div class="model-tag">Ollama (local)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Quick Start</h2>
+            <div class="code-block"># Install Vercel CLI
+npm i -g vercel
+
+# Clone and setup
+git clone https://github.com/AARUTO347/AARU_CHAT-BOT.git
+cd AARU_CHAT-BOT
+vercel link
+vercel env pull
+
+# Install and run
+pnpm install
+pnpm db:migrate
+pnpm dev</div>
+            <p>Visit <strong>http://localhost:3000</strong></p>
+        </div>
+
+        <div class="section">
+            <h2>Deploy</h2>
+            <div class="feature-card">
+                <h3>Vercel (One-Click)</h3>
+                <p>Deploy instantly with automatic environment configuration.</p>
+                <a href="https://vercel.com/templates/next.js/chatbot" class="btn btn-primary" style="margin-top:15px">Deploy Now</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tech Stack</h2>
+            <table class="tech-table">
+                <tr><th>Layer</th><th>Technology</th></tr>
+                <tr><td>Framework</td><td>Next.js 15 (App Router)</td></tr>
+                <tr><td>Language</td><td>TypeScript</td></tr>
+                <tr><td>AI</td><td>Vercel AI SDK</td></tr>
+                <tr><td>UI</td><td>shadcn/ui + Tailwind CSS + Radix UI</td></tr>
+                <tr><td>Database</td><td>Neon Serverless Postgres</td></tr>
+                <tr><td>Storage</td><td>Vercel Blob</td></tr>
+                <tr><td>Auth</td><td>Auth.js</td></tr>
+                <tr><td>Deployment</td><td>Vercel</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>AARU Chatbot</strong> — Made by <a href="https://github.com/AARUTO347">AARUTO</a></p>
+        <p style="margin-top:10px"><a href="https://github.com/AARUTO347/AARU_CHAT-BOT">GitHub</a> | <a href="https://vercel.com/templates/next.js/chatbot">Deploy</a> | <a href="https://github.com/AARUTO347/AARU_CHAT-BOT/issues">Issues</a></p>
+        <p style="margin-top:10px">MIT License</p>
+    </footer>
+</body>
+</html>
